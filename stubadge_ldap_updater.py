@@ -37,7 +37,13 @@ logFile = "/var/log/stubadge/StuBadgeMySQL" +Date +".log"
 DCServer = os.getenv('DCServer')
 BindAccount = os.getenv('BindAccount')
 BindPass = os.getenv('BindPass')
-SearchBase = os.getenv('SearchBase')
+SearchBase = ('OU=Kindergarten,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
+    'OU=Elementary,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
+    'OU=Middle,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
+    'OU=High,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
+    'OU=Meadowood,OU=Other,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
+    'OU=ZCalendar,OU=Other,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
+    'OU=First State,OU=Other,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us')
 SearchScope = ld.SUBTREE
 Attributes = ['givenname','sn','distinguishedName',
     'department','departmentNumber','description','title',
