@@ -37,7 +37,7 @@ logFile = "/var/log/stubadge/StuBadgeMySQL" +Date +".log"
 DCServer = os.getenv('DCServer')
 BindAccount = os.getenv('BindAccount')
 BindPass = os.getenv('BindPass')
-SearchBase = os.getenv('SearchBase')
+SearchBase = os.getenv('SearchBase').split(",")
 SearchScope = ld.SUBTREE
 Attributes = ['givenname','sn','distinguishedName',
     'department','departmentNumber','description','title',
