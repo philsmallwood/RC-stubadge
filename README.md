@@ -1,13 +1,14 @@
-<h2>Student Badge MySQL Updater</h2><br>
-Script to update the AD info table for the Student Badge Application
+## Student Badge MySQL Updater
+### Script to Update the AD Info Table for the Student Badge Application
 
-Steps
+#### Steps
 + Copy git repo to server
 + Run setup.sh to configure the environment
-+ Configure/Copy your .env file
-+ Configure Log location
++ Configure/copy your .env file
++ Configure log location
 + Run with the updater.sh script
 
-NOTES
-+ User must have permissions to folder and log folder to run
+#### NOTES
++ User must have execute permissions to the application folder 
++ User must have write permissions to the log folder
 
