@@ -1,0 +1,5 @@
+ldap3
+pandas
+sqlalchemy
+installers/rcadinfoexport-0.6.0-py3-none-any.whl
+installers/rcmailsend-0.2.0-py3-none-any.whl
