@@ -77,7 +77,7 @@ df_StudentInfo = ad_info_export(DCConnection,SearchBase,Attributes,SearchScope,S
 ###Update MySQL Table###
 mysqlEngine = create_engine(mysqlConnectionUrl, echo=True)
 mysqlConnection = mysqlEngine.connect()
-#df_StudentInfo.to_sql('ldapData', con = mysqlEngine, if_exists = 'replace',index=False)
+df_StudentInfo.to_sql('ldapData', con = mysqlEngine, if_exists = 'replace',index=False)
 ########
 
 
