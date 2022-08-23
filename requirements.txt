@@ -2,7 +2,7 @@ ldap3
 pandas
 sqlalchemy
 keyrings.alt
-installers/rcadinfoexport
-installers/rcmailsend
+installers/rcadinfoexport-0.7.0-py3-none-any.wh
+installers/rcmailsend-0.2.0-py3-none-any.whl
 python-dotenv
 pymysql
