@@ -1,7 +1,6 @@
 ldap3
 pandas
 sqlalchemy
-keyrings.alt
 installers/rcadinfoexport-0.9.0-py3-none-any.whl
 installers/rcmailsend-0.2.0-py3-none-any.whl
 python-dotenv
