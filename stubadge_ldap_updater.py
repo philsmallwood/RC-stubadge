@@ -43,7 +43,8 @@ SearchBase = ('OU=Kindergarten,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,D
     'OU=High,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
     'OU=Meadowood,OU=Other,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
     'OU=ZCalendar,OU=Other,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
-    'OU=First State,OU=Other,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us')
+    'OU=First State,OU=Other,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us',
+    'OU=Charter,OU=Other,OU=Students,OU=Users,OU=RCCSD,DC=redclay,DC=k12,DC=de,DC=us')
 SearchScope = ld.SUBTREE
 Attributes = ['givenname','sn','distinguishedName',
     'department','departmentNumber','description','title',
