@@ -30,7 +30,8 @@ CurrentDate = datetime.date.today()
 Date = CurrentDate.strftime('%m-%d-%Y')
 startTime = time.ctime()
 #Mail_send Vars
-logToEmail = 'philip.smallwood@redclay.k12.de.us'
+logToEmail1 = os.getenv('logToEmail1')
+logToEmail2 = os.getenv('logToEmail2')
 logSubject = 'Student Badge MySQL Updater'
 logFile = "/var/log/stubadge/StuBadgeMySQL" +Date +".log"
 #AD Variables
@@ -91,5 +92,6 @@ f.close()
 ########
 
 ###Email Results###
-mail_send(logToEmail,logSubject,logFile)
+mail_send(logToEmail1,logSubject,logFile)
+mail_send(logToEmail2,logSubject,logFile)
 ########
