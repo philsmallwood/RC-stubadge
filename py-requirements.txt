@@ -1,0 +1,7 @@
+ldap3
+pandas
+sqlalchemy
+rc-ad-info-export
+rcmailsend
+python-dotenv
+pymysql
