@@ -74,12 +74,12 @@ try:
         search_filter)
     #Log Info Download
     log_file += "---\n"
-    log_file += "Student Info Successfully Downloaded from AD"
+    log_file += "Student Info Successfully Downloaded from AD\n"
     log_file += "---\n"
 except:
     #Log Error
     log_file += "---\n"
-    log_file += "!! Error !! Student Info Downloaded Failed!"
+    log_file += "!! Error !! Student Info Downloaded Failed!\n"
     log_file += "---\n"
 ###########
 
@@ -93,12 +93,12 @@ try:
         index=False)
     #Log Database Update
     log_file += "---\n"
-    log_file += "Student Data Successfully Updated"
+    log_file += "Student Data Successfully Updated\n"
     log_file += "---\n"
 except:
     #Log Error
     log_file += "---\n"
-    log_file += "!! Error !! Student Data Update Failed!"
+    log_file += "!! Error !! Student Data Update Failed!\n"
     log_file += "---\n"
 ########
 
