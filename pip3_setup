@@ -1,0 +1,1 @@
+pip3 install -r ./py-requirements.txt --extra-index-url https://git.redclay.k12.de.us/api/packages/Philip.Smallwood/pypi/simple
