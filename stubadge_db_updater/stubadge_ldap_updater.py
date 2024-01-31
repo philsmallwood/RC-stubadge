@@ -12,30 +12,31 @@ import time
 import datetime
 from os import getenv
 from dotenv import load_dotenv
-from rcmailsend import mail_send #Self Created Module
+from rc_smtp_send import google_smtp_send
 from rc_ad_info_export import ad_connection,ad_info_export
-from rc_google_py import write_log_to_google,login_google_service_account
+from rc_google_py import write_log_to_google
 from sqlalchemy import create_engine 
 #######
 
 ###Variables###
 #Load .ENV File
 load_dotenv('../env_file/.env')
-#Date
+# Date
 current_date = datetime.date.today()
 date_str = current_date.strftime('%m-%d-%Y')
 start_time = time.ctime()
-#Google Info
+# Google Info
 google_auth_key = getenv('google_auth_key')
 network_team_drive_id = getenv('network_team_drive_id')
 stubadge_log_folder_id = getenv('stubadge_log_folder_id')
-#Log Vars
+# Log Vars
 log_file = str()
 log_file_name = 'StubadgeUpdaterLog-'
-#Email Alert Vars
+# Email Alert Vars
 alert_to_email = getenv('log_to_email')
 alert_subject = "Stubadge Updater - ERROR ALERT"
-#AD Variables
+smtp_pass = getenv('smtp_pass')
+# AD Variables
 dc_server = getenv('dc_server')
 bind_account = getenv('bind_account')
 bind_pass = getenv('bind_pass')
@@ -47,7 +48,7 @@ ad_attributes = ['givenname','sn','distinguishedName',
     'UserPrincipalName','whenChanged','employeeID']
 search_filter = '(&(objectCategory=person)(objectClass=user)\
     (!(userAccountControl:1.2.840.113556.1.4.803:=2)))' #Enabled Users
-#MySQL Variables
+# MySQL Variables
 mysql_user = getenv('mysql_user')
 mysql_pass = getenv('mysql_pass')
 mysql_server = getenv('mysql_server')
@@ -113,10 +114,14 @@ try:
         date_str)
 except:
     #Email if Error Logging
-    mail_send(alert_to_email,alert_subject)
+    google_smtp_send(alert_to_email, 
+                alert_subject, 
+                smtp_pass)
 ########
 
 ###Alert if Error###
 if "error" in log_file.lower():
-    mail_send(alert_to_email,alert_subject)
+    google_smtp_send(alert_to_email, 
+                alert_subject, 
+                smtp_pass)
 ########
