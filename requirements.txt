@@ -4,5 +4,5 @@ sqlalchemy
 python-dotenv
 pymysql
 rc-ad-info-export
-rcmailsend
+rc_smtp_send
 rc_google_py
