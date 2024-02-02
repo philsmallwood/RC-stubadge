@@ -20,7 +20,7 @@ from sqlalchemy import create_engine
 
 ###Variables###
 #Load .ENV File
-load_dotenv('../env_file/.env')
+load_dotenv('/env_file/.env')
 # Date
 current_date = datetime.date.today()
 date_str = current_date.strftime('%m-%d-%Y')
