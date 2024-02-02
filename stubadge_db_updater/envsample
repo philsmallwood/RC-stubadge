@@ -8,6 +8,7 @@ mysql_server=MYSQL_SERVER_OR_IP
 mysql_pass=MYSQL_PASSWORD
 mysql_db=MYSQL_DATABASE
 alert_to_email=EMAIL_ADDRESS
+smtp_pass=PASSWORD FOR SMTP
 [Google]
 google_auth_key = OAUTH_FILE
 network_team_drive_id = GOOGLE_DRIVE_ID
