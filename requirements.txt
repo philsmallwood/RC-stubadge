@@ -1,8 +1,7 @@
-ldap3
 pandas
 sqlalchemy
 python-dotenv
 pymysql
-rc-ad-info-export
 rc_smtp_send
 rc_google_py
+app_logger
