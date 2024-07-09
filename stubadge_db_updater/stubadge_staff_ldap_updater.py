@@ -68,7 +68,7 @@ engine.dispose()
 ###########
 
 ### Format DF ###
-df_staff_info = df_staff_info[['sn','sn','distinguishedName',
+df_staff_info = df_staff_info[['givenName','sn','distinguishedName',
                         'department','departmentNumber','description','title',
                         'userPrincipalName','whenChanged','employeeID']].copy()
 
